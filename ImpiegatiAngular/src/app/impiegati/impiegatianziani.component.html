@@ -1,0 +1,22 @@
+<div>Impiegati anziani</div>
+<div>
+<span>Numero risultati</span><br/>
+<input type="number" [(ngModel)]=numero  ><br/>
+<select class="form-control"    [(ngModel)]=dipartimento     >
+<option value=""
+   disabled
+   selected
+   hidden>Seleziona un dipartimento</option>
+<option *ngFor= 'let dipartimento of dipartimenti' [value] = 'dipartimento.id'> {{dipartimento.nome}} </option>
+</select>
+</div>
+<div class="card" *ngFor='let impiegato of impiegati'>
+    <span >Id: {{impiegato.id}}</span><br/>
+    <span >Nome: {{impiegato.nome}}</span><br/>
+    <span >Datanascita: {{impiegato.datanascita}}</span><br/>
+    <span >Dataassunzione: {{impiegato.dataassunzione}}</span><br/>
+    <span >Dipartimento: {{impiegato.dipartimento}}</span><br/>
+
+    </div>
+    
+    
